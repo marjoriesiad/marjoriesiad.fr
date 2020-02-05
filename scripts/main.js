@@ -1,6 +1,6 @@
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
-alert("Ce site est toujours en cours de construction...");
+
 
 $(document).ready(function() {
   AOS.init( {
