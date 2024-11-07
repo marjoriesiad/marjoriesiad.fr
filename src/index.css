@@ -6,3 +6,7 @@
 *{
   font-family: "Windows_Regular";
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
