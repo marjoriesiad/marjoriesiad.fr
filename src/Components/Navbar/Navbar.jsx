@@ -7,6 +7,9 @@ import contactImg from "../../assets/images/contact.png";
 import connexionImg from "../../assets/images/connexion.png";
 
 const Navbar = () => {
+    // get current time
+    const currentDate = new Date();
+    const currentTime = `${currentDate.getHours()} : ${(currentDate.getMinutes() < 10 ? "0" : "") + currentDate.getMinutes()}`
   return (
     <>
        <div class="bg-windowsgray flex justify-between items-center py-7 h-10 w-screen fixed bottom-0">
@@ -15,7 +18,7 @@ const Navbar = () => {
     </div>
 
     <div class="p-2 px-3 mr-2 border-2 border-t-gray-500 border-r-white border-b-white border-l-gray-500 font-bold">
-      15:26
+      {currentTime}
     </div>
   </div>
 
