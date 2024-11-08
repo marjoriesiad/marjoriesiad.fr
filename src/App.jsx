@@ -1,5 +1,10 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import HomePage from "./Pages/HomePage/HomePage";
+import Projects from "./Pages/ProjectPage/Projects";
+import BlogPage from "./Pages/BlogPage/BlogPage";
+import ContactPage from "./Pages/ContactPage/ContactPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
 
 function App() {
   const closeMenu = () => {
@@ -10,7 +15,15 @@ function App() {
   return (
     <>
       <div className="w-full h-screen" onClick={closeMenu}>
-        <HomePage />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projets" element={<Projects />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+        </BrowserRouter>
       </div>
       <Navbar />
     </>
