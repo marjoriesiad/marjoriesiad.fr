@@ -11,8 +11,10 @@ const WIPModal = () => {
     }
     
     const dontShow = localStorage.getItem('modal')
+   
+
   return (
-    <div class=" h-full w-full flex justify-center items-center bg-transparent z-50 absolute" id="modal">
+    <div className={`h-full w-full flex justify-center items-center bg-transparent z-50 absolute ${dontShow === "hidden" ? "hidden": ""}`} id="modal">
     <div class="bg-windowsgray h-66 w-72 border-2 border-r-gray-500 border-b-gray-500 shadow-xl">
         <div class="flex justify-between bg-gradient-to-r from-windowsblue to-linearblue px-3 h-6 items-center">
         <p class="text-white text-sm">Important ! Work in progress...</p>
